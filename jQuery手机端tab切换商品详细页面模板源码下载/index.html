@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			入伙
+		</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="js/common.js"></script>
+        <script src="js/jquery-3.1.1.min.js"></script>
+    	<script src="js/TouchSlide.1.1.js"></script>
+        
+    </head>
+    <body> 
+    	<div id="slideBox" class="slideBox">
+          <div class="bd">
+              <ul>
+                  <li>
+                      <a class="pic" href="#"><img src="images/ba1.png" /></a>
+                  </li>
+                  <li>
+                      <a class="pic" href="#"><img src="images/ba2.png" /></a>
+                  </li>
+                  <li>
+                      <a class="pic" href="#"><img src="images/ba1.png" /></a>
+                  </li>
+              </ul>
+            </div>
+    
+            <div class="hd">
+                <ul></ul>
+            </div>
+          </div>
+          <script type="text/javascript">
+              TouchSlide({ 
+                  slideCell:"#slideBox",
+                  titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+                  mainCell:".bd ul", 
+                  effect:"leftLoop", 
+                  autoPage:true,//自动分页
+                  autoPlay:true //自动播放
+              });
+          </script>   
+          <div class="clear"></div>
+    
+    		
+            <div class="xj">
+            	<p>航拍四轴飞行器 </p>
+            	<p>￥129.00 <span>￥189.00</span> </p>
+            </div>
+    
+    		
+            
+            <div id="wrap">
+                <div id="tit">
+                    <span class="select">产品详情</span>
+                    <span>拉人入伙</span>
+                </div>
+                <div class="clear"></div>
+                <div id="con">
+                    <div class="con show">
+                    	
+                    </div>
+                    <div class="con">
+                    	<ul class="ren">
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        	<li>
+                            	<div  class="xqy-p">
+                                	<img src="images/touxiang.png" />
+                                </div>
+                                <div class="xqy-p1">
+                                	<span>名字</span>
+                                    <span style="margin-left:1rem;">2016-6-4 14:22:08 </span>
+                                    <span style="margin-left:1rem;">
+                                    	减少：
+                                        <span style="color:#fe798e">¥20元</span>
+                                     </span>
+                                </div>
+                                <div class="clear"></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $('#tit span').click(function() {
+                    var i = $(this).index();//下标第一种写法
+                    $(this).addClass('select').siblings().removeClass('select');
+                    $('.con').eq(i).show().siblings().hide();
+                });
+            </script>
+    
+    		<div class="foot">
+            	<div>
+                	<a href="#">继续找人入伙</a>
+                </div>
+            	<div>
+                	<a href="#">现在就下单</a>
+                </div>
+            </div>
+            
+    
+    </body>
+</html>

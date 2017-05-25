@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo1.4</title>
+</head>
+<body>
+
+<p id="div1"></p>
+ 
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	
+	var x=myFunction(1);
+
+	// $("#div1").append(x);
+
+	function myFunction(y){
+		return y * y;
+	}
+
+	// 自调用函数
+	(function (){
+		// $("#div1").append('自调用函数');
+	})();
+
+
+
+	function myFunc2(a,b){
+		return a*b;
+	}
+
+	var x=myFunc2(2,26);
+
+	// $("#div1").html(x);
+
+
+	function myFunc3(a,b){
+		b==b||0;
+	}
+	var x=myFunc3(2,2.5);
+
+	$("#div1").html(2);
+
+</script>
+</html>

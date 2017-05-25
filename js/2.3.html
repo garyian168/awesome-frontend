@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+
+function validateValueWithFunc(value, regex, type) {
+    if (regex.exec(value)){
+        // console.log('Invalid ' + type);
+        console.info(type);
+    }
+    else{
+        // console.log('Valid ' + type);
+        console.info(type);
+    }
+}
+
+
+var parsePhone = /^\d{3}-\d{2}-\d{4}$/;
+	date=new Date().getFullYear();
+
+validateValueWithFunc('1234567890', parsePhone, date);
+
+
+</script>
+</html>

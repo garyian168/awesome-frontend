@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<style>
+	.btn{
+		width:60px;
+		height: 25px;
+		border:none;
+	}
+</style>
+<script>
+(function (win){
+        var doc = win.document,
+        html = doc.documentElement;
+        var baseWidth = 720,
+        grids = baseWidth / 100,
+        resizeEvt = 'orientationchange' in win ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = html.clientWidth || 320;
+            if( clientWidth > 720 ){ clientWidth = 720 };
+            html.style.fontSize = clientWidth / grids + 'px';
+        };
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded',function(){
+                 setTimeout(recalc)
+        }, false);
+      })(window);
+      window.Tracker = {events: [], push: function(o){this.events.push(o)}};
+</script>
+</head>
+<body>
+
+<a href="" id=home>商城首页</a> | <a href="" id=list>全部商品</a></p></div>
+<div id="text"></div>
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+// $(document).ready(function(){
+//     console.log($("#form1").serialize());
+// });
+
+(function() {
+      // var userAgent = navigator.userAgent.toLowerCase();
+      var userAgent = navigator.userAgent;
+      var isPhone=userAgent.indexOf('android') !== -1 || userAgent.indexOf('iphone') !== -1 ||userAgent.indexOf('ipod') !== -1 || userAgent.indexOf('symbian') !== -1 || (userAgent.indexOf('micromessenger') !== -1);
+      var home = document.getElementById('home');
+      var list = document.getElementById('list');
+      document.getElementById('text').innerHTML=userAgent;
+      if(isPhone) {
+        home.setAttribute('href','http://m.mi.com');
+        list.setAttribute('href','http://m.mi.com/1/#/product/category');
+      }else {
+        home.setAttribute('href','http://www.mi.com');
+        list.setAttribute('href','http://list.mi.com/0');
+      }
+    })();
+</script>
+</html>

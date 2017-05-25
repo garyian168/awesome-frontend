@@ -1,0 +1,183 @@
+<html>
+<head>
+</head>
+
+<body>
+
+
+
+<dvi id="txt"></dvi>
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+// 'use strict';
+// var a = {
+//   x: 0,
+//   calculate: function (z) {
+//     return this.x + this.y + z
+//   }
+// };
+ 
+// var b = {
+//   y: 20,
+//   __proto__: a
+// };
+ 
+// var c = {
+// 	y:parseInt(Math.random()*10),
+//   __proto__: a
+// };
+ 
+// 调用继承过来的方法
+
+// var b1=(b.calculate(30));
+// var c1=(c.calculate(40)); // 80
+
+// function res(num){
+// 	document.getElementById("txt").innerHTML=(num);
+// }
+
+// window.onload=function(){
+// 	res(c1);
+// }
+
+// $("#txt").keydown(function(event) {    
+// 	if (event.keyCode == 13) {    
+// 		console.info("OK");    
+// 	}           
+// })
+
+
+$(function(){
+	// var arr=[];
+	// var arr2=[];
+
+	// $("a").each(function(i,elem){
+
+	// 	var s=$(this).attr("data-id");
+	// 	var index=i;
+	// 	arr.push(s);
+	// 	arr2.push(index);
+	// })
+
+var MYAPP={};
+
+MYAPP.name = 'myapp';
+MYAPP.version = 1.0;
+
+MYAPP.foo = function (num1,num2) {
+    return parseInt(num1*num2);
+};
+})
+
+var tools={
+	name:"alex",
+	birth:1900,
+	wei:getAge,
+	age:function(){
+		var that=this;
+		// function getAge(){
+			var y=new Date().getFullYear();
+			return y-that.birth;			
+		// }
+		// return getAge();
+	},
+	width:function(){
+		var ww=$(window).width();
+		return ww;
+	},
+	height:function(){
+		var wh=$(window).height();
+		return wh;
+	},
+	wh:function(){
+		return "宽度："+this.width()+" 高度："+this.height();
+	},
+	circle:function(r){
+		var s=3.14*(r*r);
+		return s;
+	},
+	getUrl:function(){
+		return window.location.href;
+	},
+	getDate:function(type){
+		var d=new Date();
+		if(type=="1"){
+			return d.getFullYear()+" "+d.getMonth()+" "+d.getDate();
+		}else{
+			return d.getTime();
+		}
+	}
+	
+}
+
+function getAge(){
+	var s=new Date().getFullYear();
+	return s-this.birth;
+}
+
+/* apply */
+// console.info(getAge.apply(tools,[]));
+
+
+
+// function add(x, y, f) {
+//     return f(x) + f(y);
+// }
+// console.info(add(10, 6, Math.log));
+
+
+var alex={
+	name:'alex',
+	height:1.6,
+	run:function(){
+		return this.name+'is running';
+	}
+}
+
+function createStudent(name) {
+    // 基于Student原型创建一个新对象:
+    var s = Object.create(tools);
+    // 初始化新对象:
+    s.name = name;
+    s.color=function(){
+    	alert(Date.now());
+    }
+    return s;
+}
+
+var xh=createStudent("xh");
+
+
+class Student {
+    constructor(name) {
+        this.name = name;
+    }
+
+    hello(){
+        console.info('Hello, ' + this.name + '!');
+    }
+
+    getDate(){
+    	alert(Date.now());
+    }
+}
+
+class PrimaryStudent extends Student {
+    constructor(name, grade) {
+        super(name); // 记得用super调用父类的构造方法!
+        this.grade = grade;
+    }
+
+    myGrade() {
+        alert('I am at grade ' + this.grade);
+    }
+}
+
+var obj=new PrimaryStudent("alex","asd");
+
+
+</script>
+
+</html>

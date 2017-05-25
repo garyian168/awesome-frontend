@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function a(i,num){
+	
+	if(num===1){
+		document.write(i);
+	}else{
+		console.info(i);
+	}
+}
+
+
+var arr=['A', 'B', 'C'];
+var arr2=['D','E','F',
+7,8,9];
+var newarr=arr.concat(arr2);
+var newz=newarr.join(' .');
+
+var arr3=[1,2,3,4,5,6,7];
+
+
+
+// var a1=arr[0];
+// var a2=arr[1];
+// var a3=arr[2];
+// var a4=arr[3];
+// alert(`欢迎${a1},${a2},${a3}和${a4}同学！`);
+
+var xiaoming={
+	name:'小明',
+	age:8,
+	score:null
+}
+
+// a( 'toString' in xiaoming,1);
+
+
+var age=21;
+
+if(age>=18){
+	// a('adult',1);
+}else if(age>=6){
+	// a('teenager',1);
+}else{
+	// a('kid',1);
+}
+
+// var height = parseFloat(prompt('请输入身高(m):'));
+// var weight = parseFloat(prompt('请输入体重(kg):'));
+// var bmi=weight/(height*height);
+
+// if(bmi>32){
+//     alert("身高:"+height+"(m),"+"体重:"+weight+"(kg),"+"BMI:"+bmi+"BMI 高于32，属于严重肥胖");
+// }else if(bmi>=28){
+//     alert("身高:"+height+"(m),"+"体重:"+weight+"(kg),"+"BMI:"+bmi+"BMI 在28-32之间，属于肥胖");
+// }else if(bmi>=25){
+//     alert("身高:"+height+"(m),"+"体重:"+weight+"(kg),"+"BMI:"+bmi+"BMI 在25-28之间，属于过重");
+// }else if(bmi>=18.5){
+//     alert("身高:"+height+"(m),"+"体重:"+weight+"(kg),"+"BMI:"+bmi+"BMI 18.5-25之间，属于正常");
+// }else {
+//     alert("身高:"+height+"(m),"+"体重:"+weight+"(kg),"+"BMI:"+bmi+"BMI 低于18.5，属于过轻");
+// }
+
+
+var arr=['A','B','C'];
+var i,x;
+for(i=0;i<arr.length;i++){
+	x=arr[i];
+	// document.write(x);
+}
+
+var x=0;
+for(;;){
+	if(x>100){
+		break;
+	}
+	x ++;
+	// console.info(x);
+}
+
+
+var o={
+	name:'nancy',
+	age:20,
+	city:'Guangzhou'
+};
+
+for(var key in o){
+	// console.info(key);
+}
+
+
+var arr = [10, 20, 1, 2,8,88,6,9,50,3,90];
+
+function sortNumber(n1, n2) {
+    return n1 - n2;
+}
+
+var ar1=arr.sort(sortNumber); // [1, 2, 10, 20]
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

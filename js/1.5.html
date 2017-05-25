@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo1.5</title>
+</head>
+<body>
+
+Name   <span id="jname"></span>
+<br>
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+var JSONObject={
+	"Firstname":"silnce",
+	"Lastname":"Jean",
+	"age":"23"
+}
+
+var employees=[
+	{"Name":"slince","age":"18"},
+	{"Name":"lucy","age":"19"},
+	{"Name":"lisa","age":"21"}
+	]
+
+var txt = '{"employees":[' +
+'{"firstName":"John","lastName":"Doe" },' +
+'{"firstName":"Anna","lastName":"Smith" },' +
+'{"firstName":"Peter","lastName":"Jones" }]}';
+
+// document.getElementById("jname").innerHTML=JSONObject.Firstname
+
+// demo2
+employees[2].Name="Jona Llist";
+// document.getElementById("jname").innerHTML=employees[2].Name;
+
+// demo3 json解析器
+obj=JSON.parse(txt);
+// document.getElementById("jname").innerHTML=obj.employees[0].firstName;
+
+
+// function unix_to_datetime(unix) {
+//     var now = new Date(parseInt(unix) * 1000);
+//     return now.toLocaleString().replace(/年|月/g, "-").replace(/日/g, " ");
+// }
+
+// alert(unix_to_datetime(1471481400));
+
+// unix时间戳转换为字符串时间
+function convertTimestamp(timestamp) {
+  var d = new Date(timestamp * 1000),
+		yyyy = d.getFullYear(),
+		mm = ('0' + (d.getMonth() + 1)).slice(-2),
+		dd = ('0' + d.getDate()).slice(-2),
+		hh = d.getHours(),
+		h = hh,
+		min = ('0' + d.getMinutes()).slice(-2),
+		time = '';
+
+	time = yyyy +'-'+mm+'-'+dd + ' '+h+':'+min
+		
+	return time;
+
+}
+
+var timestamp=new Date().getTime();
+
+document.write(convertTimestamp(1599546456));
+
+document.write('<br>');
+
+// alert(convertTimestamp(1599546628));
+
+
+
+document.write(timestamp);
+</script>
+</html>

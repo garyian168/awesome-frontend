@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<form id="alldel" name="alldel" method="post" action="">
+
+<input name="n_id[]" class="navid" type="checkbox" data-id="1">
+<input name="n_id[]" class="navid" type="checkbox" data-id="2">
+<input name="n_id[]" class="navid" type="checkbox" data-id="3">
+<input name="n_id[]" class="navid" type="checkbox" data-id="4">
+<input name="n_id[]" class="navid" type="checkbox" data-id="5">
+<input name="n_id[]" class="navid" type="checkbox" data-id="6">
+<input name="n_id[]" class="navid" type="checkbox" data-id="7">
+<input type="checkbox" class="ace"  id='chkAll' data-id="100" value="全选"/>全选
+<input type="submit" name="" id="sub">
+
+</form>
+<input type="text" name="" data-id="" id="selId">
+
+<p id="js">js</p>
+<div id="list">
+    <p id="java">java</p>
+    <p id="scheme">scheme</p>
+</div>
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	$("#sub").on("click",function(){
+        return false;
+        var arr=[];
+        var singInp=$('input[name*=\'n_id\']');
+        singInp.each(function(i){
+            var checkThis=$(this).prop('checked');
+            if(checkThis){
+                var thisval=$(this).attr("data-id");
+                arr.push(thisval);
+            }
+        });
+
+        console.info(arr[2]);
+	});
+
+	
+// function checkAll(obj){
+//     $("#box input[type='checkbox']").prop('checked', $(obj).prop('checked'));
+// }
+	
+	$("#chkAll").on("click",function(){
+		$('input[name*=\'n_id\']').prop('checked',this.checked);
+	});
+
+
+
+
+var js=document.getElementById('js');
+    list=document.getElementById('list');
+    haskell=document.createElement('p');
+    haskell.id='asd';
+    haskell.innerText='Hask';
+
+
+
+var self=document.getElementById('java');
+
+var parent=self.parentElement;
+
+var remove=parent.removeChild(self);
+
+
+
+</script>
+</html>

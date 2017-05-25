@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+
+<!--  <input id="JeffreyPay" onclick="PayMoney('赵帅');" type="button" value="老赵付钱" />
+    <input id="JamesPay" type="button" onclick="PayMoney('老应');" value="老应付钱" />
+    <input id="DlyingPay" type="button" onclick="PayMoney('陈大');" value="老陈付钱" /> -->
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+var pagew=window.innerWidth;
+var pageh=window.innerHeight;
+alert(pagew+" "+pageh);
+
+// var seSt=window.sessionStorage;
+// var setitem=seSt.setItem('name','test');
+// var getItem=seSt.getItem('name');
+// console.info(getItem);
+
+/* 2016.09.02*/
+//结合JSON.stringify使用更强大
+var person = {'name': 'rainman', 'age': 24};
+localStorage.setItem("me", JSON.stringify(person));
+JSON.parse(localStorage.getItem('me')).name;	// 'rainman'
+
+console.info(person["name"]);
+
+var db = openDatabase("ToDo", "0.1", "A lalert of to do items.", 200000);    // 打开链接
+if(!db) { alert("Failed to connect to database."); }                         // 检测连接是否创建成功
+
+
+
+
+
+
+// $(document).ready(function(){
+//     $("p").click(function(){
+//         $(this).hide(500);
+//     })
+// })
+
+// function testFunc(id){
+//     this.id=id;
+// }
+
+
+
+
+// var ls=localStorage;
+// var data={
+//   user:"John",
+//   sex:"female"
+// };
+
+// ls.setItem('data',data);
+// ls.setItem('realData',JSON.stringify(data));
+// console.info(ls.data); //[object Object]
+// console.info(ls.realData); //{"user":"John","sex":"female"}
+
+
+
+        var PayMoney = function(name) {
+            alert(name + "：今天我请客，我来付钱");
+        }
+
+        jQuery(document).ready(function() {
+            $("#JeffreyPay").attr("onclick", "");
+            $("#JamesPay").attr("onclick", "");
+
+            $("#JeffreyPay").click(function() {
+                alert("。。。。这里不能刷卡");
+            });
+
+            $("#JeffreyPay").click(function() {
+                PayMoney("陈大");
+            });
+            $("#JamesPay").bind("click", function() {
+                alert("。。。。忘记带钱包了");
+            });
+            $("#JamesPay").bind("click", $("#DlyingPay").attr("onclick"));
+        });
+    </script>
+
+</html>

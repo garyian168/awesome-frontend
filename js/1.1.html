@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="test"></p>
+
+<button type="button" onclick="myFunc()">点击</button>
+<button onclick="ShowName('nancy ',29)">Submit</button>
+<button onclick="ShowName('lucy ',21)">Submit</button>
+
+
+
+
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+// demo6
+	testFun();
+
+	document.getElementById('demo6').innerHTML='I am a '+ window.color;
+	
+	function testFun(){
+		carName="lemon";
+		color='blue';
+	}
+
+// demo5
+	var fruit = 'apple';
+	testFunc();
+
+	function testFunc(){
+		document.getElementById('demo5').innerHTML='I am a '+ fruit;
+	}	
+
+var a=100;
+var b=["hiuih","48"];
+var c={name:"gary",lastname:"zombie"};
+var j;
+a %=5;
+
+var car = "Honda";
+
+document.getElementById("demo").innerHTML= car;
+
+
+$("#test").append('Hello World');
+
+
+var a;
+a=15;
+b=63;
+c=a*b;
+console.log(mult(a,b));
+
+
+
+
+
+var LastName='ALEX',Age='33',Job='Manager';
+
+document.getElementById("demo4").innerHTML=LastName+' '+Age+' '+Job;
+
+var car = {type:"Fiat", model:500, color:"white"};
+
+var person = {
+    firstName: "John",
+    lastName : "Alex",
+    id : 5566,
+    fullName : function() 
+	{
+       return this.firstName + " " + this.lastName;
+    }
+};
+document.getElementById("demo3").innerHTML=person.fullName();
+
+function mult(a,b){
+	return a*b;
+}
+
+function ShowName(name,age){
+	var a='欢迎用户：'+name;
+	var b='年龄：'+age;
+	alert(a+b);
+}
+
+function bmi(a,b){
+	return a/(b*2);
+}
+
+function myFunc(){
+	x=document.getElementById("demo2");
+	x.innerHTML="点击出现";
+}
+
+
+</script>
+</html>

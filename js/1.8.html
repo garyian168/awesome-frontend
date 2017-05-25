@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>Index</title>
+</head>
+
+<body>
+
+<div id="v"></div>
+ 
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+'use strict';
+
+function person(firstname,lastname,age,eyecolor)
+{
+this.firstname=firstname;
+this.lastname=lastname;
+this.age=age;
+this.eyecolor=eyecolor;
+
+this.changeName=changeName;
+function changeName(fname,lname){
+	this.firstname=fname
+	this.lastname=lname
+}
+
+
+}
+
+
+
+
+var xa=new person("alex","gray",16,"orange");
+xa.changeName("bill","alex");
+
+function display(){
+	return xa.firstname+' '+xa.lastname+' '+xa.age+' '+xa.eyecolor;
+}
+
+
+$("#v").html(display());
+$("div").css({"color":"#F56","font-weight":"900"});
+
+</script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1.3</title>
+</head>
+<body>
+
+
+<form name="myForm" action="" onsubmit="return vaildForm()" method="post">
+	姓：<input type="text" name="fname">
+	<input type="submit" name="" value="提交">
+</form>
+
+<p id="demo"></p>
+
+<a href="javascript:void(alert('warning'))">点击</a>
+ 
+
+</body>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	function vaildForm(){
+		var x=document.forms["myForm"]["fname"].value;
+		if(x==null||x==""){
+			alert("姓必须填写");
+			return false;
+		}
+	}
+
+var text = '{"employees":[' +
+	'{"firstName":"John","lastName":"Doe" },' +
+	'{"firstName":"Anna","lastName":"Smith" },' +
+	'{"firstName":"Peter","lastName":"Jones" }]}';
+obj = JSON.parse(text);
+document.getElementById("demo").innerHTML =
+	obj.employees[0].firstName + " " + obj.employees[1].lastName;	
+</script>
+</html>

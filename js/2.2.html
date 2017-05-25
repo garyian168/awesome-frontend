@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+<link rel="stylesheet" type="text/css" href="daterangepicker.css">
+</head>
+<body>
+
+<input type="text"  name="reservation" id="reservation" class="form-control sl-date" value="" placeholder="点击选择日期范围"/>
+
+</body>
+<script src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="moment.min.js"></script>
+<script src="daterangepicker.js"></script>
+<script>
+	$('#reservation').daterangepicker(null, 
+			function(start, end, label) {
+			console.log(start.toISOString(), end.toISOString(), label);
+		}
+		);
+</script>
+</html>
